@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const MainNav = () => {
     return (
         <div className='main-nav'>
@@ -148,6 +149,7 @@ const MainNav = () => {
                     <li className='home-nav-vs8'></li>
                 </ul>
             </nav>
+            <hr className='home-nav-hr-line'></hr>
         </div>
     )
 }

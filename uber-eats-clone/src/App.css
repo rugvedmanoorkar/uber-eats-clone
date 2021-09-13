@@ -69,9 +69,7 @@ margin: 28px;
   width: 32px;
 }
 
-.cartContent{
-  
-}
+
 
 .signIn{
   height: 38px;
@@ -171,3 +169,57 @@ a{
   height: 1px;
   display: block;
 }
+
+.home-nav-hr-line{
+  background-color: rgb(226, 226, 226);
+  margin: 24px 0px 0px;
+  border: none;
+  height: 1px;
+}
+
+.banners-grid{
+  grid-column: 1 / -1;
+  min-width: 0px;
+}
+
+.banners-area{
+  padding: 24px 40px;
+  margin-right: -40px;
+  margin-left: -40px;
+}
+
+.banners-flex{
+  margin-bottom: -24px;
+  margin-right: -12px;
+  margin-left: -12px;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.banners-flex-2{
+  margin-left: 0%;
+  margin-bottom: 24px;  
+  padding-right: 12px;
+  padding-left: 12px;
+  display: block;
+  flex: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.banners-content{
+  justify-content: center;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.banner{
+  flex: none;
+  width: calc(33.3333% + -16px);
+  margin: 0px 12px;
+}
+
+
