@@ -1,0 +1,173 @@
+html, body, #root, #wrapper {
+  height: 100%;
+}
+
+body {
+  background: #FFFFFF;
+  color: #000000;
+  font-family: UberMoveText, sans-serif;
+  
+}
+
+header{
+  display: block;
+  height: 92px;
+  align-items:center; 
+  padding: 0 40px;
+  margin: 0 auto; 
+}
+
+.container{
+display: flex;
+justify-content: space-between;
+}
+.logo{
+display: block;
+width: auto;
+height: 24px;
+margin: 28px;
+}
+.deliveryType{
+  margin: 3px 8px;
+  height: 48px;
+  width: 170px;
+  
+  background: #EEEEEE;
+  border-radius: 500px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+}
+.hm{ /*header margin h1*/
+  margin: 0.67em;
+}
+.htbn{
+  display: inline;
+  padding: 16px 16px;
+}
+.hbtn{
+  display: inline;
+  padding: 16px 16px;
+}
+
+.hrbtn{ /*header right buttons*/
+  display: inline;
+  padding: 20px 16px;
+}
+.searchLocation{
+  text-decoration: none;
+}
+
+.cart{
+  color:#FFFFFF;
+  background-color: black;
+  border-radius: 500px;
+  margin-top: 25px;
+  height: 8px;
+  padding: 12px 16px;
+  width: 32px;
+}
+
+.cartContent{
+  
+}
+
+.signIn{
+  height: 38px;
+  width: 72px;
+  box-sizing: border-box;
+  margin-top: 24px ;
+  border-radius: 500px;
+  color: black; 
+  background: #EEEEEE;
+}
+
+.signinContent{
+  padding:10px;
+  white-space: nowrap;
+}
+
+
+.main-content{
+  padding: 0 40px;
+  min-width: 1024px;
+  max-width: 1920px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.main-grid{
+  grid-template-columns: repeat(3 , 1fr);
+  gap: 40px 24px;
+  display: grid;
+}
+
+.main-nav{
+grid-column: 1 / -1;
+min-width: 0px;
+}
+
+.home-nav{
+  
+  display: flex;
+  justify-content: center;
+}
+
+.home-nav-list{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.hs5{
+  /*horizontal space*/
+  height: 24px;
+}
+
+li{
+  display: block;
+}
+.home-nav-list-link{
+max-width: fit-content;
+min-width: 80px;
+align-items: center;
+flex-direction: column;
+display: flex;
+position: relative;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-nav-img{
+  height: 60px;
+  width: 60px;
+  position: relative;
+
+}
+
+.home-nav-img2{
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+.home-nav-hs8{
+  height: 8px;
+}
+
+.home-nav-name{
+  text-align: center;
+  font-weight: 500;
+  font-family: UberMoveText, sans-serif;
+  line-height: 16px;
+  font-size: 14px;
+  width: 100%;
+}
+.home-nav-vs8{
+  padding: 0px;
+  width:16px;
+  height: 1px;
+  display: block;
+}
