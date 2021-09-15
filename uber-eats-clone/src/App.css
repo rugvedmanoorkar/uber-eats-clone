@@ -398,3 +398,77 @@ display: flex;
   display: flex;
 
 }
+
+.dietary-svg{
+  fill: currentColor;
+  flex: none;
+  height: 20px;
+  width: 20px;
+}
+
+.hs8{
+  width: 8px;
+}
+
+.vs24{
+  height:24px
+}
+
+.main-frame-grids{
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+}
+
+.main-frame-grid{
+  min-width: 0px;
+}
+.main-frame-grid2{
+  overflow: hidden;
+  position: relative;
+}
+
+a{
+  text-decoration: none;
+    color: inherit;
+}
+
+.mf-grid-name{
+  font-size: 0px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  font-weight: normal;
+}
+
+.mf-grid-contents{
+  pointer-events: none;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.mf-grid-contents2{
+  width: 100%;
+  position: relative;
+}
+
+.mf-grid-img{
+  background: rgb(246, 246, 246);
+  height: 128px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.grid-img-src{
+  object-fit: cover;
+  height: 100%;
+  border: none;
+  display: block;
+  width: 100%;
+}
