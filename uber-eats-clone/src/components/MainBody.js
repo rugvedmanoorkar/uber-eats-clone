@@ -1,6 +1,8 @@
 import React from 'react'
+import Dietery from './Filters/Dietery'
 import PriceRange from './Filters/PriceRange'
 import Sort from './Filters/Sort'
+import MainFrameContent from './MainFrameContent'
 const MainBody = () => {
     return (
         <div class='main-body'>
@@ -14,10 +16,15 @@ const MainBody = () => {
                             <div>
                                 <Sort />
                                 <PriceRange />
+
+                                <Dietery />
                               </div> 
                         </div>
                         </div>
                     </div>
+                </div>
+                <div className="main-frame-content">
+                    <MainFrameContent />
                 </div>
         </div>
     )

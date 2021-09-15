@@ -34,19 +34,19 @@ const PriceRange = () => {
 
           
               <button className='dollar-range'>
-                  <div className="dollar-content">$</div>
+                  <div className="dollar-content">$$</div>
               </button>
           
 
           
               <button className='dollar-range'>
-                  <div className="dollar-content">$</div>
+                  <div className="dollar-content">$$$</div>
               </button>
           
 
           
               <button className='dollar-range'>
-                  <div className="dollar-content">$</div>
+                  <div className="dollar-content">$$$$</div>
               </button>
           
           </div>
