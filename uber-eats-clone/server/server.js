@@ -4,7 +4,7 @@ const cors = require('cors')
 const dotenv = require('dotenv');
 const colors = require('colors');
 const bodyParser = require('body-parser');
-const connectDB = require('./config/db')
+const conn = require('./config/db')
 
 dotenv.config({path: './config/config.env'})
 
@@ -14,14 +14,13 @@ const registration = require ('./routes/registration')
 
 const app = express();
 
-app.use(bodyParser.json());
-app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
-);
 
-connectDB();
+app.use(cors())//
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+
+conn.connect();
+console.log(`MySQL connected: `.cyan.underline.bold)
 //Create connection
 // const db = mysql.createConnection({
 //     host: 'localhost',

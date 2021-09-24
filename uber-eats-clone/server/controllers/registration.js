@@ -1,28 +1,28 @@
+const connectDB = require('../config/db')
 const db = require('../config/db')
+
 
 exports.getUser =(req, res, next) => {
     res.send('GET USER DETAILS')
 }
 
 exports.addUser =async (req, res, next) => {
-    res.json(req.body);
+    console.log(res.body)
     
     const {username, password, phonenumber } = req.body
     
     const sql = "INSERT INTO users (username, password, phonenumber) values (?,?,?)"
-    const user =  await db.query(sql,[username, password, phonenumber],
-        (err, result) =>{
-            if (err) {
-                console.log(err)
-            } else {
-                return res.send(201).json({
-                    success: true,
-                    data: username + "account is created"
-                })
-            }
-        }
-        
-        )
+    db.query(sql, [username , password, phonenumber], function(err, data, fields) {
+        if (err){
+            console.log(`Error: ${err}`.red.bold)
+        }else{
+        res.json({
+          status: 200,
+          message: "New user added successfully"
+        })
+    }
+      })
+    
     
     
 }
