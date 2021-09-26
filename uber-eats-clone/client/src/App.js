@@ -13,13 +13,14 @@ import CustomerSignup from '../src/components/Authentication/CustomerSignup'
 function App() {
   return (
     <div className="App">
-      {/* <Router>
-        <Route path='/signup' render={(props) => <CustomerSignup />}/>
+      <Header />
+      <Router>
+        <Route path='/signup' exact component= {CustomerSignup }/>
         <Route path="/" exact component={Main}/>
-      </Router> */}
-      {/* <Header />
-      <Main /> */}
-      <CustomerSignup />
+      </Router>
+      
+      {/* <Main />
+      <CustomerSignup /> */}
     </div>
   );
 }

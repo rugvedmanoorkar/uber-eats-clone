@@ -1,13 +1,14 @@
 const express = require('express')
 const router = express.Router();
 var bodyParser = require('body-parser')
-const {getUser, deleteUser, addUser} = require('../controllers/registration')
-var jsonParser = bodyParser.json()
+const {getUser, deleteUser, addUser} = require('../../controllers/customer/registration')
+
+
 
 router
-.route('/')
+.route('/customer/signup/')
 .get(getUser)
-.post(addUser,jsonParser)
+.post(addUser)
 
 
 router

@@ -24,7 +24,7 @@ const MainBody = () => {
                     </div>
                 </div>
                 <div className="main-frame-content">
-                    <MainFrameContent />
+                <MainFrameContent />
                 </div>
         </div>
     )

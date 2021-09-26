@@ -10,7 +10,7 @@ dotenv.config({path: './config/config.env'})
 
 
 //Routes
-const registration = require ('./routes/registration')
+const registration = require ('./routes/customer/registration')
 
 const app = express();
 
@@ -57,7 +57,7 @@ app.get('/', (req, res) => res.send('Hello'))
 //     }
 // )
 
-app.use('/api/v1/register', registration)
+app.use('/api/v1/', registration)
 
 const PORT = process.env.PORT || 5000;
 
