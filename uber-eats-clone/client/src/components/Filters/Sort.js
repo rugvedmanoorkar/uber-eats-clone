@@ -26,31 +26,31 @@ const Sort = () => {
         </div>
       </button>
       <div className="sort-options">
-          <input type='radio' id='opt-radio1' class='opt-radio' value='Picked for you default' checked></input>
-          <label for='opt-radio1' class='opt-label'>
+          <input type='radio' id='opt-radio1' className='opt-radio' value='Picked for you default' checked></input>
+          <label  className='opt-label'>
               <div className="hs6"></div>
-              <span class='sort-text'> Picked for you (default)</span>
+              <span className='sort-text'> Picked for you (default)</span>
           </label>
           <div className='vh8'></div>
 
-          <input type='radio' id='opt-radio1' class='opt-radio' value='Most popular' checked></input>
-          <label for='opt-radio1' class='opt-label'>
+          <input type='radio' id='opt-radio1' className='opt-radio' value='Most popular' ></input>
+          <label  className='opt-label'>
               <div className="hs6"></div>
-              <span class='sort-text'> Most popular</span>
+              <span className='sort-text'> Most popular</span>
           </label>
           <div className='vh8'></div>
 
-          <input type='radio' id='opt-radio1' class='opt-radio' value='Rating' checked></input>
-          <label for='opt-radio1' class='opt-label'>
+          <input type='radio' id='opt-radio1' className='opt-radio' value='Rating' ></input>
+          <label  className='opt-label'>
               <div className="hs6"></div>
-              <span class='sort-text'> Rating</span>
+              <span className='sort-text'> Rating</span>
           </label>
           <div className='vh8'></div>
 
-          <input type='radio' id='opt-radio1' class='opt-radio' value='Delivery Time' checked></input>
-          <label for='opt-radio1' class='opt-label'>
+          <input type='radio' id='opt-radio1' className='opt-radio' value='Delivery Time' ></input>
+          <label  className='opt-label'>
               <div className="hs6"></div>
-              <span class='sort-text'> Delivery Time</span>
+              <span className='sort-text'> Delivery Time</span>
           </label>
           <div className='vh8'></div>
           

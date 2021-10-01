@@ -512,7 +512,8 @@ h1, h2, h3, h4, p {
 }
 
 .hs4{
-  width: 4px;
+  width: 1px;
+  
 }
 
 .mg-grid-label-des{
@@ -525,16 +526,123 @@ h1, h2, h3, h4, p {
   position: absolute;
 }
 
-.mf-grid-label-details{
+
+
+.mf-grid-ratings{
+  flex: 0 0 28px;
+  font-size: 12px;
+  border-radius: 50%;
   height: 28px;
   width: 28px;
+  background: #EEEEEE;
   line-height: 16px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.mf-grid-label-details{
+  width: 100%;
+  justify-content: flex-start;
   align-items: center;
   display: flex;
-  background: #EEEEEE;
-  font-weight: 500;
+  flex-wrap: nowrap;
 }
 
+.ticket-img{
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.ticket-img2{
+  color: rgb(84, 84, 84);
+  text-overflow: ellipsis;
+  font-weight: normal;
+  line-height: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ticket-img3{
+  color: rgb(117, 117, 117);
+  font-weight: normal;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: UberMoveText, sans-serif;
+}
+
+.ticket-h2{
+  color: rgb(84, 84, 84);
+}
+
+.ticket-content{
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.star{
+  display: inline-flex;
+  font-weight: normal;
+  line-height: 20px;
+  font-size: 14px;
+  align-items: center;
+  color: rgb(84, 84, 84);
+}
+
+.grid-label-del-fee{
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.grid-label-del-fee-span{
+  color: rgb(84, 84, 84);
+  text-overflow: ellipsis;
+  font-weight: normal;
+  line-height: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.grid-label-del-fee2{
+  color: rgb(117, 117, 117);
+  font-weight: normal;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: UberMoveText, sans-serif;
+}
+
+.grid-label-del-fee-content{
+  color: #000000;
+}
+
+.grid-label-time{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.grid-label-time-span{
+  color: rgb(84, 84, 84);
+  text-overflow: ellipsis;
+  font-weight: normal;
+  line-height: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.grid-label-del-time-content{
+  color: rgb(117, 117, 117);
+  font-weight: normal;  
+  line-height: 20px;
+  font-size: 14px;
+  
+}
 .customer-signup{
   color:green;
 }
@@ -545,4 +653,86 @@ h1, h2, h3, h4, p {
 
 .login_button,.register_button{
   border: solid 1px;
+}
+
+/*Customer profile */
+.cust-profile-main{
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  overflow: auto;
+  margin-top: 8px;
+  flex: 1;
+  box-sizing: border-box;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+}
+
+.cust-profile-flex{
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-direction: row;
+}
+
+
+
+.profile-sidebar{
+  flex-shrink: 0;
+  width: 224px;
+  box-sizing: border-box;
+}
+
+.profile-sidebar2{
+  position: fixed;
+}
+
+.profile-sidebar-nav{
+  background: #FFFFFF;
+  width: 224px;
+}
+.profile-sidebar-nav-list{
+  width: inherit;
+  padding: 8px 0 0 0;
+  list-style: none;
+  display: block;
+  margin: 0;
+}
+
+.profile-sidebar-nav-item{
+  margin-bottom: 8px;
+}
+
+.cust-profile-frame{
+  max-width: 100%;
+  flex: 1;
+}
+
+.cust-profile-frame2{
+  width: 584px;
+  padding-bottom: 24px;
+  padding-right: 16px;
+  padding-left: 16px;
+  box-sizing: border-box;
+  flex-direction: column;
+  display: flex;
+}
+
+.cust-profile-contents{
+  flex-direction: column;
+  display: flex;
+}
+
+.cust-pro-title{
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;  
+  background-color: #276EF1;
+  box-sizing: border-box;
 }

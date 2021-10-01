@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -22,7 +22,8 @@ const Header = () => {
                 <div className='cartContent'>Cart</div>
             </div>
             <div className='signIn'>
-                <div className='signinContent'>Sign in</div>
+                <div className='signinContent'>
+                <Link to="/signup">Sign in</Link></div>
                 
             </div>
         </div>

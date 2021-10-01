@@ -5,12 +5,12 @@ const MainNav = () => {
     return (
         <div className='main-nav'>
             <div className='hs5'></div>
-            <nav class='home-nav'>
-                <ul class='home-nav-list'>
+            <nav className='home-nav'>
+                <ul className='home-nav-list'>
                     <li>
-                        <a class='home-nav-list-link'>
+                        <a className='home-nav-list-link'>
                             <div className='home-nav-img'>
-                            <img role='presentation' src='assets/shortcuts/deals.png' class='home-nav-img2' />
+                            <img role='presentation' src='assets/shortcuts/deals.png' className='home-nav-img2' />
                             </div>
                             <div className='home-nav-hs8'></div>
                             <div className='home-nav-name'>Deals</div>
@@ -18,9 +18,9 @@ const MainNav = () => {
                     </li>
                     <li className='home-nav-vs8'></li>
                     <li>
-                        <a class='home-nav-list-link'>
+                        <a className='home-nav-list-link'>
                             <div className='home-nav-img'>
-                            <img role='presentation' src='assets/shortcuts/convenience.png' class='home-nav-img2' />
+                            <img role='presentation' src='assets/shortcuts/convenience.png' className='home-nav-img2' />
                             </div>
                             <div className='home-nav-hs8'></div>
                             <div className='home-nav-name'>Deals</div>
@@ -28,9 +28,9 @@ const MainNav = () => {
                     </li>
                     <li className='home-nav-vs8'></li>
                     <li>
-                        <a class='home-nav-list-link'>
+                        <a className='home-nav-list-link'>
                             <div className='home-nav-img'>
-                            <img role='presentation' src='assets/shortcuts/alcohol.png' class='home-nav-img2' />
+                            <img role='presentation' src='assets/shortcuts/alcohol.png' className='home-nav-img2' />
                             </div>
                             <div className='home-nav-hs8'></div>
                             <div className='home-nav-name'>Deals</div>
@@ -38,9 +38,9 @@ const MainNav = () => {
                     </li>
                     <li className='home-nav-vs8'></li>
                     <li>
-                        <a class='home-nav-list-link'>
+                        <a className='home-nav-list-link'>
                             <div className='home-nav-img'>
-                            <img role='presentation' src='assets/shortcuts/pharmacy.jpg' class='home-nav-img2' />
+                            <img role='presentation' src='assets/shortcuts/pharmacy.jpg' className='home-nav-img2' />
                             </div>
                             <div className='home-nav-hs8'></div>
                             <div className='home-nav-name'>Deals</div>
@@ -48,9 +48,9 @@ const MainNav = () => {
                     </li>
                     <li className='home-nav-vs8'></li>
                     <li>
-                        <a class='home-nav-list-link'>
+                        <a className='home-nav-list-link'>
                             <div className='home-nav-img'>
-                            <img role='presentation' src='assets/shortcuts/specialty_foods.jpg' class='home-nav-img2' />
+                            <img role='presentation' src='assets/shortcuts/specialty_foods.jpg' className='home-nav-img2' />
                             </div>
                             <div className='home-nav-hs8'></div>
                             <div className='home-nav-name'>Deals</div>
@@ -58,9 +58,9 @@ const MainNav = () => {
                     </li>
                     <li className='home-nav-vs8'></li>
                     <li>
-                        <a class='home-nav-list-link'>
+                        <a className='home-nav-list-link'>
                             <div className='home-nav-img'>
-                            <img role='presentation' src='assets/shortcuts/top_eats.png' class='home-nav-img2' />
+                            <img role='presentation' src='assets/shortcuts/top_eats.png' className='home-nav-img2' />
                             </div>
                             <div className='home-nav-hs8'></div>
                             <div className='home-nav-name'>Deals</div>
@@ -68,9 +68,9 @@ const MainNav = () => {
                     </li>
                     <li className='home-nav-vs8'></li>
                     <li>
-                        <a class='home-nav-list-link'>
+                        <a className='home-nav-list-link'>
                             <div className='home-nav-img'>
-                            <img role='presentation' src='assets/shortcuts/chinese.png' class='home-nav-img2' />
+                            <img role='presentation' src='assets/shortcuts/chinese.png' className='home-nav-img2' />
                             </div>
                             <div className='home-nav-hs8'></div>
                             <div className='home-nav-name'>Deals</div>
@@ -78,9 +78,9 @@ const MainNav = () => {
                     </li>
                     <li className='home-nav-vs8'></li>
                     <li>
-                        <a class='home-nav-list-link'>
+                        <a className='home-nav-list-link'>
                             <div className='home-nav-img'>
-                            <img role='presentation' src='assets/shortcuts/pizza.png' class='home-nav-img2' />
+                            <img role='presentation' src='assets/shortcuts/pizza.png' className='home-nav-img2' />
                             </div>
                             <div className='home-nav-hs8'></div>
                             <div className='home-nav-name'>Deals</div>
@@ -88,9 +88,9 @@ const MainNav = () => {
                     </li>
                     <li className='home-nav-vs8'></li>
                     <li>
-                        <a class='home-nav-list-link'>
+                        <a className='home-nav-list-link'>
                             <div className='home-nav-img'>
-                            <img role='presentation' src='assets/shortcuts/mexican.png' class='home-nav-img2' />
+                            <img role='presentation' src='assets/shortcuts/mexican.png' className='home-nav-img2' />
                             </div>
                             <div className='home-nav-hs8'></div>
                             <div className='home-nav-name'>Deals</div>
@@ -98,9 +98,9 @@ const MainNav = () => {
                     </li>
                     <li className='home-nav-vs8'></li>
                     <li>
-                        <a class='home-nav-list-link'>
+                        <a className='home-nav-list-link'>
                             <div className='home-nav-img'>
-                            <img role='presentation' src='assets/shortcuts/sushi.png' class='home-nav-img2' />
+                            <img role='presentation' src='assets/shortcuts/sushi.png' className='home-nav-img2' />
                             </div>
                             <div className='home-nav-hs8'></div>
                             <div className='home-nav-name'>Deals</div>
@@ -108,9 +108,9 @@ const MainNav = () => {
                     </li>
                     <li className='home-nav-vs8'></li>
                     <li>
-                        <a class='home-nav-list-link'>
+                        <a className='home-nav-list-link'>
                             <div className='home-nav-img'>
-                            <img role='presentation' src='assets/shortcuts/indian.png' class='home-nav-img2' />
+                            <img role='presentation' src='assets/shortcuts/indian.png' className='home-nav-img2' />
                             </div>
                             <div className='home-nav-hs8'></div>
                             <div className='home-nav-name'>Deals</div>
@@ -118,9 +118,9 @@ const MainNav = () => {
                     </li>
                     <li className='home-nav-vs8'></li>
                     <li>
-                        <a class='home-nav-list-link'>
+                        <a className='home-nav-list-link'>
                             <div className='home-nav-img'>
-                            <img role='presentation' src='assets/shortcuts/healthy.png' class='home-nav-img2' />
+                            <img role='presentation' src='assets/shortcuts/healthy.png' className='home-nav-img2' />
                             </div>
                             <div className='home-nav-hs8'></div>
                             <div className='home-nav-name'>Deals</div>
@@ -128,9 +128,9 @@ const MainNav = () => {
                     </li>
                     <li className='home-nav-vs8'></li>
                     <li>
-                        <a class='home-nav-list-link'>
+                        <a className='home-nav-list-link'>
                             <div className='home-nav-img'>
-                            <img role='presentation' src='assets/shortcuts/sandwich.png' class='home-nav-img2' />
+                            <img role='presentation' src='assets/shortcuts/sandwich.png' className='home-nav-img2' />
                             </div>
                             <div className='home-nav-hs8'></div>
                             <div className='home-nav-name'>Deals</div>
@@ -138,9 +138,9 @@ const MainNav = () => {
                     </li>
                     <li className='home-nav-vs8'></li>
                     <li>
-                        <a class='home-nav-list-link'>
+                        <a className='home-nav-list-link'>
                             <div className='home-nav-img'>
-                            <img role='presentation' src='assets/shortcuts/fastfood.png' class='home-nav-img2' />
+                            <img role='presentation' src='assets/shortcuts/fastfood.png' className='home-nav-img2' />
                             </div>
                             <div className='home-nav-hs8'></div>
                             <div className='home-nav-name'>Deals</div>

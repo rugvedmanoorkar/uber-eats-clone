@@ -1,62 +1,45 @@
 import React from "react";
+import {connect , useSelector, useDispatch} from 'react-redux'
+import { getRestaurants } from "../actions/restaurantActions";
+import MainFrameGridBody from "./MainFrameGridBody";
+import { useEffect } from "react";
+import axios from 'axios'
+const MainFrameContent = ({getRestaurants, restaurant}) => {
 
-const MainFrameContent = () => {
+  useEffect(() => {
+    getRestaurants();
+    
+  }, [getRestaurants]);
+  console.log(restaurant)
+  const restaurants  = typeof(restaurant.data) == 'undefined' ? [] : restaurant.data ;
+  console.log(restaurants , " P" )
+
+  
   return (
     <div>
       <div className="vs24"></div>
-        <div className="main-frame-grids">
-          <div className="main-frame-grid">
-            <div className="main-frame-grid2">
-              <a href="/store/mcdonalds-609-market-st/4YpL0wYAQ8mfcHwQq0aaKA">
-                <h3 class="mf-grid-name">McDonald's®</h3>
-              </a>
-              <div className="mf-grid-contents">
-                <div className="mf-grid-contents2">
-                  <div className="mf-grid-img">
-                    <div className="mf-grid-img2">
-                      <picture>
-                        <img
-                          alt
-                          role="presentation"
-                          src="assets/content-images/mcd_test.webp"
-                          srcset=""
-                          sizes="25vw"
-                          class="grid-img-src"
-                        >
-                          
-                        </img>
-                      </picture>
-                    </div>
-                  </div>
-                  <div className="mf-grid-label">
-                    <div className="mf-grid-label-name">
-                      <div className="mf-grid-label-name2">
-                        
-                          McDonald's®
-                          <div class="hs4"></div>
-                          <span class="mf-grid-label-des">
-                            A top rated restaurant with 4.6 out of 5 stars based
-                            on more than 200 reviews.
-                          </span>
-                          <div
-                            aria-hidden="true"
-                            class="mf-grid-ratings"
-                          >
-                            4.6
-                          </div>
-                        
-                      </div>
-                    </div>
-                    <div className="mf-grid-label-details"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      
+      <div className="main-frame-grids">
+        {Object.keys(restaurants).map(restaurant => (
+          <MainFrameGridBody key ={restaurant.id} />
+        ))}
+        {/* <MainFrameGridBody />
+        <MainFrameGridBody />
+        <MainFrameGridBody />
+        <MainFrameGridBody /> */}
+      </div>
     </div>
   );
 };
+const mapStateToProps = (state) => {
+  return {
+    
+  restaurant: state.restaurant.restaurants,
+  //isAuthenticated: state.auth.isAuthenticated
+  }
+  console.log(state.restaurant.restaurants, " ***")
+}
 
-export default MainFrameContent;
+
+
+
+export default connect(mapStateToProps, { getRestaurants })(MainFrameContent);

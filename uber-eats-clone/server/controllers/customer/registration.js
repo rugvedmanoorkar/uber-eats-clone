@@ -21,12 +21,12 @@ exports.getUser =(req, res, next) => {
 }
 
 exports.addUser =async (req, res, next) => {
-    console.log(res.body)
+    //console.log(res.body)
     
-    const {username, password, emailid } = req.body
-    
+    const {username, password, emailid , phonenumber, name, dateofbirth, city, state, country, nickname,about, pin } = req.body
+    console.log(username)
     const sql = "INSERT INTO users (username, password, emailid) values (?,?,?)"
-    db.query(sql, [username , password, emailid], function(err, data, fields) {
+    db.query(sql, [name, username , password, emailid,  dateofbirth, city, state, country, pin, about, nickname ], function(err, data, fields) {
         if (err){
             console.log(`Error: ${err}`.red.bold)
         }else{
@@ -39,7 +39,7 @@ exports.addUser =async (req, res, next) => {
  }
 
 exports.deleteUser =(req, res, next) => {
-    res.send('DELETE sUSER DETAILS')
+    //res.send('DELETE sUSER DETAILS')
     const {username} = req.body
     const sql = "DELETE FROM users where (username) = (?)" ;
     db.query(sql, [username], (err, row) => {
