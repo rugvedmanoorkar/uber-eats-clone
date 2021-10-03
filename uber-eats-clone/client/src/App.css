@@ -655,6 +655,433 @@ h1, h2, h3, h4, p {
   border: solid 1px;
 }
 
+
+/*Every Restaurant Page*/
+.rest-main-content{
+  margin: 0 auto;
+  max-width: 1920px;
+  box-sizing: border-box;
+  min-width: 1024px;
+}
+
+.restaurant-banner{
+  margin: 0px;
+  background: rgb(246, 246, 246);
+  width: 100%;
+  position: relative;
+  
+}
+
+.restaurant-banner2{
+  left: 0px;
+  height: 100%;
+  top: 0px;
+  width: 100%;
+}
+
+.rest-banner-pic{
+ 
+  object-fit: cover;
+  height: 100%;
+  border: none;
+  display: block;
+  width: 100%;
+}
+
+.rest-banner-figure{
+  margin: 0px;
+  background: rgb(246, 246, 246); 
+  bottom: 0;
+  position: absolute;
+  right:0;
+  left:0;
+  top: 0;
+}
+
+.rest-banner-flex{
+  min-height: 240px;
+  background: transparent;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+}
+
+.rest-banner-flex-up{
+  flex-basis: 80px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  display: flex;
+
+}
+
+.rest-banner-flex-mid{
+  align-items: center;
+  display: flex;
+}
+
+.rest-banner-flex-down{
+  flex-basis: 140px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0) 100%);
+  justify-content: space-between;
+  display: flex;
+
+}
+
+.rest-banner-title-area{
+  padding: 24px 0px;
+  flex-direction: column;
+  display: flex;
+}
+
+
+.rest-banner-title-area2_5{
+  flex-shrink: 1;
+  flex-grow: 1;
+  display: flex;
+}
+.rest-banner-title-area3{
+  padding: 0px;
+  z-index: 0;
+  color: #FFFFFF;
+  flex-grow: 0;
+  box-sizing: border-box;
+  display: flex;
+
+}
+
+.rest-banner-spacer{
+  width: 40px;
+  height: 1px;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.rest-banner-title-area3{
+
+}
+
+.rest-banner-spacer-40{
+  width: 40px;
+  height: 1px;
+  flex-shrink: 0;
+  margin: 0;
+    padding: 0;
+}
+
+
+.rest-banner-title-content{
+  font-weight: 700;
+  font-family: UberMove, sans-serif;
+  line-height: 44px;
+  font-size: 36px;
+  margin: 0;
+}
+
+.rest-banner-details{
+  padding-top: 8px;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: UberMoveText, sans-serif;
+  display: flex;
+  align-items: center;
+
+}
+
+.rest-banner-details2{
+
+}
+
+.rest-banner-ticket{
+  line-height: 24px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+.ticket{
+  color: #545454;
+  font-weight: 500;
+  line-height: 16px;
+  font-size: 14px;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.rest-banner-del-fee{
+  margin: -1px;
+  white-space: nowrap;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+}
+
+
+.rest-banner-del-fee2{
+  align-items: center;
+  display: flex;
+}
+
+.rest-banner-del-time{
+  margin: -1px;
+  white-space: nowrap;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+}
+
+
+.rest-banner-spacer-2{
+  width: 2px;
+}
+
+.rest-banner-hidden{
+display:none
+}
+
+
+.rest-banner-del-time2{
+  align-items: center;
+  display: flex;
+}
+
+/*Addd favvv feature */
+
+/*menu contents*/
+.menu-main-sec{
+  padding: 0 40px;
+  margin: 0 auto;
+  min-width: 1024px;
+  max-width: 1920px;
+  box-sizing: border-box;
+}
+
+.menu-headers-sec{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-header-sec2{
+  padding-top: 30px;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+}
+
+.menu-header-nav{
+  flex-wrap: wrap;
+  flex: 1;
+  height: 48px;
+  overflow: hidden;
+  display: flex;
+  
+}
+.menu-nav-head{
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+
+.menu-nv-content{
+  border-bottom: 2px solid rgb(0, 0, 0);
+  padding-bottom: 30px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+
+}
+
+.menu-hr.line{
+  background-color: rgb(226, 226, 226);
+  margin: 0px;
+  border: none;
+  height: 1px;
+}
+
+.menu-list{
+  list-style: none;
+  display: block;
+}
+
+.menu-item{
+  padding: 40px 0px 8px;
+}
+
+.menu-item-header{
+  line-height: 32px;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: UberMove, sans-serif;
+  padding-bottom: 24px;
+}
+
+.menu-item-title-sec{
+  align-items: center;
+  display: flex;
+}
+
+.menu-item-ticket2{
+  fill: rgb(5, 148, 79);
+  height: 16px;
+  width: 16px;
+  flex: none;
+}
+
+.menu-item-spacer-16{
+  width: 16px;
+}
+
+.menu-item-grid{
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 24px;
+  display: grid;
+}
+
+
+.mi-grid-item-sec{
+  min-width: 0px;
+  display: flex;
+
+}
+
+.mi-grid-item{
+  text-decoration: none;
+  flex: 1;
+  cursor: pointer;
+  display: flex;
+}
+
+.mi-grid-item2{
+  border: 1px solid rgb(226, 226, 226);
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+
+}
+
+
+.mi-grid-item3{
+  flex: 1;
+  flex-direction: row;
+  display: flex;
+
+}
+
+
+.mi-grid-item-details{
+  padding: 16px;
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+}
+
+.mi-title{
+  display: block;
+}
+
+.mi-title-label{
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: UberMoveText, sans-serif;
+  align-items: center;
+  display: flex;
+  margin: 0;
+}
+.mi-title-label2{
+  overflow: hidden;
+}
+
+.mi-item-details{
+  word-break: break-word;
+  padding-top: 4px;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+.mi-item-details2{
+  line-height: 20px;
+  color: #545454;
+  font-weight: normal;
+  font-family: UberMoveText, sans-serif;
+
+  font-size: 14px;
+}
+
+
+.mi-item-price{
+  align-items: flex-end;
+  padding-top: 8px;
+  flex: 1;
+  display: flex;
+}
+
+.mi-item-price2{
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+.mi-item-calo{
+  color: #545454;
+  display: inline-flex;
+  font-weight: normal;
+  line-height: 24px;
+  font-size: 14px;
+  align-items: center;
+}
+
+.mi-item-calo2{
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  display: flex;  
+  flex-direction: column;
+}
+
+.mi-item-pic{
+
+  width: 158px;
+  height: 158px;
+  flex-shrink: 0;
+}
+
+.mi-item-img{
+  width: 158px;
+  height: 158px;
+  object-fit: cover;
+  opacity: 1;
+  flex-shrink: 0;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Customer profile */
 .cust-profile-main{
   width: 100%;

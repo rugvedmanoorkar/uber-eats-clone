@@ -2,36 +2,36 @@ import {GET_RESTAURANTS , ADD_RESTAURANT, DELETE_RESTAURANT} from '../actions/ty
 
 const initialState = {
     restaurants: [
-        {
-            "id": 1,
-            "name": "Beet",
-            "address": "750 Alameda",
-            "city": "San Jose",
-            "state": "California",
-            "country": "United States",
-            "first_name": "John",
-            "last_name": "Smith",
-            "rating": "4.5",
-            "delivery_fee": 5,
-            "review_count": 100,
-            "timings": "6 PM",
-            "tags": "coffee "
-        },
-        {
-            "id": 2,
-            "name": "BK",
-            "address": "101 San Fernando",
-            "city": "San Jose",
-            "state": "California",
-            "country": "United States",
-            "first_name": "Amanda",
-            "last_name": "Waller",
-            "rating": "3.6",
-            "delivery_fee": 4,
-            "review_count": 70,
-            "timings": "9 PM",
-            "tags": "mexican"
-        }
+        // {
+        //     "id": 1,
+        //     "name": "Beet",
+        //     "address": "750 Alameda",
+        //     "city": "San Jose",
+        //     "state": "California",
+        //     "country": "United States",
+        //     "first_name": "John",
+        //     "last_name": "Smith",
+        //     "rating": "4.5",
+        //     "delivery_fee": 5,
+        //     "review_count": 100,
+        //     "timings": "6 PM",
+        //     "tags": "coffee "
+        // },
+        // {
+        //     "id": 2,
+        //     "name": "BK",
+        //     "address": "101 San Fernando",
+        //     "city": "San Jose",
+        //     "state": "California",
+        //     "country": "United States",
+        //     "first_name": "Amanda",
+        //     "last_name": "Waller",
+        //     "rating": "3.6",
+        //     "delivery_fee": 4,
+        //     "review_count": 70,
+        //     "timings": "9 PM",
+        //     "tags": "mexican"
+        // }
     ]
 }
 

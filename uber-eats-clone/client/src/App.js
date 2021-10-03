@@ -13,6 +13,7 @@ import CustomerSignup2 from './components/Authentication/CustomerSignup2';
 import Profile from './components/Customer/Profile';
 import {Provider } from 'react-redux';
 import store from './store'
+import RestaurantPage from './components/RestaurantPage';
 
 
 function App() {
@@ -20,14 +21,18 @@ function App() {
     <Provider store={store}>
     <div className="App">
       
-      <Router>
+      {/* <Router>
       <Header />
         <Route path='/signup' exact component= {CustomerSignup }/>
         <Route path="/" exact component={Main}/>
-      </Router>
+      </Router> */}
       
       {/* <Main />
       <CustomerSignup /> */}
+
+        <RestaurantPage />
+
+
 
       <Profile/>
     </div>

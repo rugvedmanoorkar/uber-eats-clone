@@ -1,11 +1,12 @@
 import React from 'react'
 
-const MainFrameGridBody = () => {
+const MainFrameGridBody = ({restaurant}) => {
+  console.log(restaurant, " inside Grid")
     return (
         <div className="main-frame-grid">
           <div className="main-frame-grid2">
             <a href="/store/mcdonalds-609-market-st/4YpL0wYAQ8mfcHwQq0aaKA">
-              <h3 className="mf-grid-name">McDonald's®</h3>
+              <h3 className="mf-grid-name">{restaurant.name}</h3>
             </a>
             <div className="mf-grid-contents">
               <div className="mf-grid-contents2">
@@ -26,15 +27,14 @@ const MainFrameGridBody = () => {
                 <div className="mf-grid-label">
                   <div className="mf-grid-label-name">
                     <div className="mf-grid-label-name2">
-                      McDonald's®
+                      {restaurant.name }
                       {/* <div className="hs4"></div>  */}
                       <span className="mf-grid-label-des">
-                        A top rated restaurant with 4.6 out of 5 stars based on
-                        more than 200 reviews.
+                      &nbsp; ({restaurant.address})&nbsp;
                       </span>
                     </div>
                     <div aria-hidden="true" className="mf-grid-ratings">
-                      4.6
+                      {restaurant.rating}
                     </div>
                   </div>
                   <div className="mf-grid-label-details">
@@ -60,7 +60,7 @@ const MainFrameGridBody = () => {
                       <span className="grid-label-del-fee-span">
                         <div className="grid-label-del-fee2">
                           <span className="grid-label-del-fee-content">
-                            $2.99 Delivery Fee
+                            ${restaurant.delivery_fee} Delivery Fee
                           </span>
                         </div>
                       </span>
