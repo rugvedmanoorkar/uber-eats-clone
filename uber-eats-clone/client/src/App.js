@@ -14,6 +14,7 @@ import Profile from './components/Customer/Profile';
 import {Provider } from 'react-redux';
 import store from './store'
 import RestaurantPage from './components/RestaurantPage';
+import RestaurantMenu from './components/RestaurantMenu';
 
 
 function App() {
@@ -21,20 +22,21 @@ function App() {
     <Provider store={store}>
     <div className="App">
       
-      {/* <Router>
+      <Router>
       <Header />
         <Route path='/signup' exact component= {CustomerSignup }/>
         <Route path="/" exact component={Main}/>
-      </Router> */}
+        <Route path="/restaurant"  component={RestaurantPage}/>
+      </Router>
       
       {/* <Main />
       <CustomerSignup /> */}
 
-        <RestaurantPage />
+        {/* <RestaurantPage /> */}
 
 
 
-      <Profile/>
+      {/* <Profile/> */}
     </div>
     </Provider>
   );

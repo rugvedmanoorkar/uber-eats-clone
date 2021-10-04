@@ -20,3 +20,24 @@ exports.getRestaurantsInCity =async (req, res, next) => {
         }
     })
 }
+
+exports.getRestaurantMenu =async (req, res, next) => {
+    //res.send('GET RESTAURANT IN AREA')
+   
+    const id = req.params.id
+    console.log(id, " This is id")
+    const sql = "SELECT * FROM menu where (restaurant_id) = (?) " ;
+    //const sql = "SELECT * FROM usersdb.menu where restaurant_id = 1" ;
+    db.query(sql, [id], (err, row) => {
+        if(err){
+            console.log(`Error: ${err}`.red.bold)
+        } else {
+            console.log(res.data, " Data" )
+            res.json({
+                status: 200,
+                data: row,
+                message: "Menu loaded successfully"
+            })
+        }
+    })
+}

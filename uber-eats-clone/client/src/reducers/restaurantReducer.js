@@ -1,4 +1,4 @@
-import {GET_RESTAURANTS , ADD_RESTAURANT, DELETE_RESTAURANT} from '../actions/types'
+import {GET_RESTAURANTS , ADD_RESTAURANT, DELETE_RESTAURANT, GET_MENU} from '../actions/types'
 
 const initialState = {
     restaurants: [
@@ -32,8 +32,12 @@ const initialState = {
         //     "timings": "9 PM",
         //     "tags": "mexican"
         // }
+    ],
+    menu: [
+
     ]
 }
+
 
 export default function(state = initialState, action) {
     switch (action.type) {
@@ -60,6 +64,16 @@ export default function(state = initialState, action) {
     //       ...state,
     //       loading: true
     //     };
+
+
+    case GET_MENU:
+        
+        return {
+          ...state,
+          menu: action.payload,
+          loading: false,
+          
+        };
       default:
         return state;
     }

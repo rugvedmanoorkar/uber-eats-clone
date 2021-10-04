@@ -7,19 +7,20 @@ import { useEffect } from "react";
 
 
 const RestaurantPage = ({getRestaurantMenu, menu}) => {
-  
-    const location = useLocation();
-    const restaurant = location["state"]["restaurant"]
-    console.log(restaurant.id , " IDD")
- 
-    useEffect(() => {
-     getRestaurantMenu(restaurant.id);
-     
-   }, [getRestaurantMenu]);
+   const location = useLocation();
    
- 
-   const menus  = typeof(menu) == 'undefined' ? [] : menu ;
-   console.log(menu)
+   const restaurant = location["state"]["restaurant"]
+   console.log(restaurant.id , " IDD")
+
+   useEffect(() => {
+    getRestaurantMenu(restaurant.id);
+    
+  }, [getRestaurantMenu]);
+  
+
+  const menus  = typeof(menu) == 'undefined' ? [] : menu ;
+  console.log(menu)
+
   return (
     <div className="rest-main-content">
       <div className="restaurant-banner">

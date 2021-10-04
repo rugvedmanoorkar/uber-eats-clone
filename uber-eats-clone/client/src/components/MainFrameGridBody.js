@@ -1,13 +1,22 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MainFrameGridBody = ({restaurant}) => {
   console.log(restaurant, " inside Grid")
+  const id = restaurant.id
     return (
         <div className="main-frame-grid">
           <div className="main-frame-grid2">
-            <a href="/store/mcdonalds-609-market-st/4YpL0wYAQ8mfcHwQq0aaKA">
+          <Link to= {
+            {
+              pathname:`/restaurant/${restaurant.id}`,
+              state:{
+                restaurant: restaurant
+              }
+            }
+          } > {/* <Link to="/restaurant"><a href="/store/mcdonalds-609-market-st/4YpL0wYAQ8mfcHwQq0aaKA"> */}
               <h3 className="mf-grid-name">{restaurant.name}</h3>
-            </a>
+            {/* </a></Link> */} </Link>
             <div className="mf-grid-contents">
               <div className="mf-grid-contents2">
                 <div className="mf-grid-img">
