@@ -15,6 +15,7 @@ import {Provider } from 'react-redux';
 import store from './store'
 import RestaurantPage from './components/RestaurantPage';
 import RestaurantMenu from './components/RestaurantMenu';
+import Cart from './components/Cart';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
 
 
       {/* <Profile/> */}
+      <Cart />
     </div>
     </Provider>
   );
