@@ -1,13 +1,14 @@
 import React from 'react'
 
-const CartItem = () => {
+const CartItem = ({item}) => {
+  console.log(item , " Cart Item ")
     return (
         <li className="cart-item">
         <div className="cart-item-count">
           <div className="cart-item-count-dropdown">
             <select className="cart-item-count-dropdown2">
               <option value="0" className="fx">
-                Remove
+                0
               </option>
               <option value="1" className="fx" default>
                 1
@@ -332,19 +333,21 @@ const CartItem = () => {
         >
           <div className="cart-item-name">
             <div className="cart-item-name2">
-              <div className="cart-item-name-title">Milk Shakes </div>
+              <div className="cart-item-name-title">{item.item} </div>
               <div className="cart-spacer4"></div>
-              <div className="cart-item-price">$12.58</div>
+              <div className="cart-item-price">${item.price}</div>
             </div>
-            <div className="cart-item-desc">
-              Pick Your Milk Shake Flavor
-            </div>
+            {/* <div className="cart-item-desc">
+              Description
+            </div> */}
             <ul>
-              <li className="cart-item-desc2">Vanilla</li>
+              <li className="cart-item-desc2"></li>
             </ul>
           </div>
         </a>
+        <div class="cart-spacer"></div>
       </li>
+      
     )
 }
 

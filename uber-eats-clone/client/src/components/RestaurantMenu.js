@@ -1,18 +1,21 @@
-import React from "react";
+import React ,{useEffect}from "react";
 import RestaurantMenuItem from "./RestaurantMenuItem";
-import { addItem } from "../actions/menuActions";
+import { addItem, getItems } from "../actions/menuActions";
 import { connect } from "react-redux";
 
-const RestaurantMenu = ({ menus, addItem, item }) => {
+const RestaurantMenu = ({ menus, addItem, item ,getItems }) => {
   console.log(menus, " menus CHECKKKKKKK");
 
+ 
   const addToCart = (menu) => {
     console.log("ITEM TO ADD:", menu);
     const newItem = menu;
 
     addItem(newItem);
     console.log("ITEM ADDED", menu);
+    
   };
+  
   console.log(item);
   return (
     <div className="menu-container">
@@ -115,11 +118,11 @@ const RestaurantMenu = ({ menus, addItem, item }) => {
   );
 };
 const mapStateToProps = (state) => {
-  console.log(state.item.items, " ITEM STATE READ");
+  console.log(state.item, " ITEM STATE READ");
   return {
     item: state.item,
   };
 
 };
 
-export default connect(mapStateToProps, { addItem })(RestaurantMenu);
+export default connect(mapStateToProps, { addItem, getItems })(RestaurantMenu);

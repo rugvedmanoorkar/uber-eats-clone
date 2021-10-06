@@ -26,7 +26,7 @@ const Header = () => {
             <div className='search hm hbtn'></div>
             <div className='cart'>
                 <button className='cartContent' onClick={cartToggle}>Cart
-                { showResults ? <Cart /> : null }
+                
                 </button>
             </div>
             <div className='signIn'>
@@ -35,6 +35,7 @@ const Header = () => {
                 
             </div>
         </div>
+        { showResults ? <Cart close={cartToggle}/> : null }
         </header>
     )
 }
