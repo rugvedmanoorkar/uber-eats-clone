@@ -1,7 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Link } from 'react-router-dom';
+import Cart from './Cart';
 
 const Header = () => {
+    const [showResults, setShowResults] = React.useState(false)
+    const cartToggle = () => {
+        console.log(showResults, " Cart toggle")
+        showResults == true ? setShowResults(false): setShowResults(true)
+    }
     return (
         <header>
         <div className ='container'>
@@ -19,7 +25,9 @@ const Header = () => {
             </div>
             <div className='search hm hbtn'></div>
             <div className='cart'>
-                <div className='cartContent'>Cart</div>
+                <button className='cartContent' onClick={cartToggle}>Cart
+                { showResults ? <Cart /> : null }
+                </button>
             </div>
             <div className='signIn'>
                 <div className='signinContent'>

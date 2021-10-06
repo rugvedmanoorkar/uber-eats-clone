@@ -1,7 +1,18 @@
-import React from "react";
+import React,{useEffect} from "react";
+import { getItems } from "../actions/menuActions";
+import { connect } from "react-redux";
+import CartItem from "./CartItem";
 
-const Cart = () => {
-  return (
+const Cart = ({getItems, item}) => {
+  useEffect(() => {
+    getItems();
+    
+  }, [getItems]);
+  const close = () => {
+    
+
+  }
+    return (
     
       <div className="cart-main">
         <div className="cart-main2">
@@ -12,7 +23,7 @@ const Cart = () => {
             </div>
             <button
               aria-label="Close"
-              className="cart-close-btn-sec"
+              className="cart-close-btn-sec" onClick={close}
             >
               <div className="cart-close-btn">
                 <svg
@@ -39,6 +50,8 @@ const Cart = () => {
             
             
             <ul className='cart-items'>
+            
+              <CartItem />
               <li className="cart-item">
                 <div className="cart-item-count">
                   <div className="cart-item-count-dropdown">
@@ -402,5 +415,11 @@ const Cart = () => {
     
   );
 };
+const mapStateToProps = (state) => {
+  console.log(state.item.items, " Cart");
+  return {
+    item: state.item,
+  };
+};
 
-export default Cart;
+export default connect(mapStateToProps, { getItems })(Cart);

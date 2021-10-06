@@ -1,11 +1,22 @@
-import React from 'react'
-import RestaurantMenuItem from './RestaurantMenuItem'
+import React from "react";
+import RestaurantMenuItem from "./RestaurantMenuItem";
+import { addItem } from "../actions/menuActions";
+import { connect } from "react-redux";
 
-const RestaurantMenu = ({menus}) => {
-    console.log(menus , " menus CHECKKKKKKK")
-    return (
-        <div className="menu-container">
-            <div className="menu-main-sec">
+const RestaurantMenu = ({ menus, addItem, item }) => {
+  console.log(menus, " menus CHECKKKKKKK");
+
+  const addToCart = (menu) => {
+    console.log("ITEM TO ADD:", menu);
+    const newItem = menu;
+
+    addItem(newItem);
+    console.log("ITEM ADDED", menu);
+  };
+  console.log(item);
+  return (
+    <div className="menu-container">
+      <div className="menu-main-sec">
         <div>
           <div>
             <div className="menu-headers-sec">
@@ -87,21 +98,28 @@ const RestaurantMenu = ({menus}) => {
               </span>
             </h2>
             <ul className="menu-item-grid">
+              {typeof menus == "undefined"
+                ? []
+                : Object.values(menus).map((menu) => (
+                    <l1 onClick={() => addToCart(menu)}>
+                      <RestaurantMenuItem key={menu.id} menu={menu} />
+                    </l1>
+                  ))}
 
-            {typeof(menus) == "undefined" ? []: Object.values(menus).map(menu => (
-          <l1><RestaurantMenuItem key ={menu.id} menu={menu}/></l1>
-        ))}
-        
-
-                {/* <RestaurantMenuItem /> */}
-
-              
+              {/* <RestaurantMenuItem /> */}
             </ul>
           </li>
         </ul>
       </div>
-        </div>
-    )
-}
+    </div>
+  );
+};
+const mapStateToProps = (state) => {
+  console.log(state.item.items, " ITEM STATE READ");
+  return {
+    item: state.item,
+  };
 
-export default RestaurantMenu
+};
+
+export default connect(mapStateToProps, { addItem })(RestaurantMenu);
