@@ -6,9 +6,10 @@ const {getUser, deleteUser, addUser} = require('../../controllers/customer/regis
 
 
 router
-.route('/customer/signup/')
+.route('/customer/login/')
 .get(getUser)
 .post(addUser)
+.delete(deleteUser)
 
 
 router

@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React,{useEffect, useState} from "react";
 import { getItems } from "../actions/menuActions";
 import { connect } from "react-redux";
 import CartItem from "./CartItem";
@@ -12,10 +12,8 @@ const Cart = ({getItems, item, close}) => {
   
   const items = item.items
   console.log(items.length, " Item in cart")
-
-  items.map((item) => {
-    console.log(item , "Mapped" )
-  })
+  const [total, setTotal] = useState(0)
+  
     return (
     
       <div className="cart-main">
@@ -57,9 +55,8 @@ const Cart = ({getItems, item, close}) => {
             {items.length == 0 
                 ? []
                 : items.map((item) => ( 
-                    
-                      <CartItem key={item.id} item={item} />
-                      
+
+                      <CartItem key={item.id} item={item} total = {total}/>
                   ))}
             </ul>
             

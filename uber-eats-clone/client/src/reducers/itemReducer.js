@@ -19,13 +19,13 @@ export default function (state = initialState, action) {
       return {
         ...state,
         items: state.items.filter(
-          (transaction) => transaction.id !== action.payload
+          (item) => item.id !== action.payload
         ),
       };
 
     case ADD_ITEM:{
       
-      return {
+       return {
         ...state,
         items: [action.payload, ...state.items],
         

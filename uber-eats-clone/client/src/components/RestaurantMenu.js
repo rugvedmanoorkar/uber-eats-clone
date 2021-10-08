@@ -10,7 +10,8 @@ const RestaurantMenu = ({ menus, addItem, item ,getItems }) => {
   const addToCart = (menu) => {
     console.log("ITEM TO ADD:", menu);
     const newItem = menu;
-
+    const getAddedItems = getItems()
+    console.log(getAddedItems)
     addItem(newItem);
     console.log("ITEM ADDED", menu);
     

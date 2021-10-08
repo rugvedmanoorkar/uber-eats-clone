@@ -10,6 +10,7 @@ import {
 
 import CustomerSignup from '../src/components/Authentication/CustomerSignup'
 import CustomerSignup2 from './components/Authentication/CustomerSignup2';
+import CustomerLogin from './components/Authentication/CustomerLogin';
 import Profile from './components/Customer/Profile';
 import {Provider } from 'react-redux';
 import store from './store'
@@ -25,7 +26,7 @@ function App() {
       
       <Router>
       <Header />
-        <Route path='/signup' exact component= {CustomerSignup }/>
+        <Route path='/signup' exact component= {CustomerLogin }/>
         <Route path="/" exact component={Main}/>
         <Route path="/restaurant"  component={RestaurantPage}/>
       </Router>
