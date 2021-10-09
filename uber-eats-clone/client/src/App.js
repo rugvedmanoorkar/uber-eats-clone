@@ -19,6 +19,7 @@ import RestaurantPage from './components/RestaurantPage';
 
 import RestaurantMenu from './components/RestaurantMenu';
 import Cart from './components/Cart';
+import RestaurantSignup from './components/Authentication/RestaurantSignup';
 
 
 
@@ -32,8 +33,12 @@ function App() {
       <Header />
         <Route path='/signin' exact component= {CustomerLogin }/>
         <Route path='/signup' exact component= {CustomerSignup3 }/>
-        <Route path='/signup/restaurant' exact component= {CustomerSignup3 }/>
+        <Route path='/signup/restaurant' exact component= {RestaurantSignup }/>
         <Route path='/signin/restaurant' exact component= {RestaurantLogin}/>
+
+        <Route path='/profile/restaurant' exact component= {RestaurantLogin}/>
+        <Route path='/profile/customer' exact component= {Profile}/>
+        
         <Route path="/" exact component={Main}/>
         <Route path="/restaurant"  component={RestaurantPage}/>
       </Router>
