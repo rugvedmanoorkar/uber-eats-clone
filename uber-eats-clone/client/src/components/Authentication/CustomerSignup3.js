@@ -7,6 +7,7 @@ const CustomerSignup3 = () => {
   const [password, setPassword] = useState("");
   const [rpassword, setRpassword] = useState("");
   const [email, setEmail] = useState("");
+  const [street, setStreet] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [about, setAbout] = useState("");
@@ -20,12 +21,25 @@ const CustomerSignup3 = () => {
 
   return (
     <div>
+      <div className="cl-logo" data-reactid="7">
+        <div className="cl-logo2" data-reactid="8">
+          <a href="/login/" data-reactid="9">
+            <div data-reactid="10" className="cl-logo3">
+              <img
+                className="cl-logo4"
+                src="https://d1a3f4spazzrp4.cloudfront.net/arch-frontend/1.1.1/d1a3f4spazzrp4.cloudfront.net/eats/eats-logo-1a01872c77.svg"
+                data-reactid="12"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
       <div class="cs-main">
         <div className="cs-main2">
           <div class="cs-main-heading">Sign Up with Uber</div>
           <div class="cs-main-hidden"></div>
         </div>
-
+        <div className="cl-spacer8"></div>
         <div className="cs-form">
           <form className="cs-form2" method="post">
             <div>
@@ -173,6 +187,37 @@ const CustomerSignup3 = () => {
                     autofocus="on"
                     onChange={(e) => {
                         setEmail(e.target.value);
+                      }}
+                  />
+                  <div class="cs-input-icon"></div>
+                </div>
+                <div role="alert" aria-live="assertive" aria-atomic="false">
+                  <div class="cs-input-alert">&nbsp;</div>
+                </div>
+              </div>
+
+
+              <div class="cs-input-text">
+                <label id="cs-input-label" class="cs-input-label" for="Name">
+                  {" "}
+                  Street{" "}
+                </label>
+                <div class="cs-input">
+                  <input
+                    id="street"
+                    name="street"
+                    type="text"
+                    value={street}
+                    class="cs-input-box"
+                    placeholder="City"
+                    aria-describedby="error-caption-cs-input-label form-title cs-input-label"
+                    aria-required="true"
+                    autocorrect="on"
+                    autocapitalize="words"
+                    placeholdermsgkey="m2.first_name"
+                    autofocus="on"
+                    onChange={(e) => {
+                        setStreet(e.target.value);
                       }}
                   />
                   <div class="cs-input-icon"></div>

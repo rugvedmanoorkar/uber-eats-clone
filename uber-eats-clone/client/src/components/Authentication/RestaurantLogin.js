@@ -3,20 +3,16 @@ import { getUser } from "../../actions/userAction";
 import {connect } from 'react-redux'
 import { Redirect } from 'react-router-dom';
 
-const CustomerLogin = ({getUser, user}) => {
+const RestaurantLogin = ({getUser, user}) => {
   const [email, setEmail] = useState("");
+  const [store, setStore] = useState("");
   const [password, setPassword] = useState("");
+  const [location, setlocation] = useState("");
 
   const onSubmit = (e) => {
-    e.preventDefault();
-    console.log(email , password, " EP" );
-    getUser(email, password);
-    console.log(user, " User in cust login")
+   
   }
-  if(user.user.data.length > 0){
-    console.log("Go to main page");
-    
-  }
+  
   console.log(email);
   return (
     <div>
@@ -38,11 +34,11 @@ const CustomerLogin = ({getUser, user}) => {
           <div>
             <form className="cl-form" onSubmit={onSubmit}>
               <h4 className="cl-label" id="input-title">
-                Welcome back
+                Welcome back Store Sign In
               </h4>
               <div className="cl-spacer8"></div>
               <label className="cl-label2" id="input-label" for="useridInput">
-                Sign in with your email address.
+                Sign in with your email address
               </label>
               <div className="cl-spacer24">
                 <div>
@@ -71,13 +67,14 @@ const CustomerLogin = ({getUser, user}) => {
               </div>
 
               <label className="cl-label2" id="input-label" for="useridInput">
-                Sign in with your password.
+                Sign in with your password
               </label>
               <div className="cl-spacer24">
                 <div>
                   <div className="cl-input">
                     <input
                       className="cl-input-area"
+                      type="password"
                       id="useridInput"
                       autoCorrect="off"
                       autoCapitalize="off"
@@ -96,7 +93,69 @@ const CustomerLogin = ({getUser, user}) => {
                 </div>
                 <div className="cl-error-caption" id="error-caption">
                   <div className="cl-error-caption-text">
-                  {typeof(user.user.data) == 'undefined' ? <div>{}</div> : <Redirect to='/' />}
+                  
+                  </div>
+                </div>
+              </div>
+
+              <label className="cl-label2" id="input-label" for="useridInput">
+                Sign in with your Store Name
+              </label>
+              <div className="cl-spacer24">
+                <div>
+                  <div className="cl-input">
+                    <input
+                      className="cl-input-area"
+                      id="useridInput"
+                      autoCorrect="off"
+                      autoCapitalize="off"
+                      name="textInputValue"
+                      value={store}
+                      className="text-input"
+                      placeholder="Password "
+                      aria-required="true"
+                      aria-invalid="true"
+                      aria-describedby="error-caption input-title"
+                      onChange={(e) => {
+                        setStore(e.target.value);
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="cl-error-caption" id="error-caption">
+                  <div className="cl-error-caption-text">
+                  
+                  </div>
+                </div>
+              </div>
+
+              <label className="cl-label2" id="input-label" for="useridInput">
+                Sign in with your Store Location
+              </label>
+              <div className="cl-spacer24">
+                <div>
+                  <div className="cl-input">
+                    <input
+                      className="cl-input-area"
+                      id="useridInput"
+                      autoCorrect="off"
+                      autoCapitalize="off"
+                      name="textInputValue"
+                      value={location}
+                      className="text-input"
+                      placeholder="Password "
+                      aria-required="true"
+                      aria-invalid="true"
+                      aria-describedby="error-caption input-title"
+                      onChange={(e) => {
+                        setlocation(e.target.value);
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="cl-error-caption" id="error-caption">
+                  <div className="cl-error-caption-text">
+                  
                   </div>
                 </div>
               </div>
@@ -133,4 +192,4 @@ const mapStateToProps = (state) => {
   }
   
 }
-export default connect(mapStateToProps, { getUser })(CustomerLogin);
+export default connect(mapStateToProps, { getUser })(RestaurantLogin);

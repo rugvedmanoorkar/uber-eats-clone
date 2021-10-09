@@ -39,6 +39,16 @@ const Header = () => {
                 <Link to="/signup">Sign Up</Link></div>
                 
             </div>
+            <div className='signIn'>
+                <div className='signinContent'>
+                <Link to="/signup/restaurant">R Sign Up</Link></div>
+                
+            </div>
+            <div className='signIn'>
+                <div className='signinContent'>
+                <Link to="/signin/restaurant">R Sign In</Link></div>
+                
+            </div>
         </div>
         { showResults ? <Cart close={cartToggle}/> : null }
         </header>
