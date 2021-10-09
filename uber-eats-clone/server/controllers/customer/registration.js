@@ -3,7 +3,9 @@ const db = require("../../config/db");
 
 //Get user creds from server
 exports.getUser = async (req, res, next) => {
-  const { username, password } = req.body;
+  
+  let { username, password } = req.query;
+  
   const sql = "SELECT * FROM users where (username) = (?) and (password) = (?)";
   db.query(sql, [username, password], (err, row) => {
     if (err) {
@@ -15,27 +17,25 @@ exports.getUser = async (req, res, next) => {
         message: "Server Error",
       });
     } else {
-    
-        if (row.length > 0){
-              res.json({
-        status: 200,
-        data: row,
-        message: "User Found and logging in",
-      })}else {
+      console.log(row, " Row");
+      if (row.length > 0) {
         res.json({
-            status: 404,
-            data: row,
-            message: "User or Password is incorrect",
-        })
-    
-
+          status: 200,
+          data: row,
+          message: "User Found and logging in",
+        });
+      } else {
+        res.json({
+          status: 404,
+          data: row,
+          message: "User or Password is incorrect",
+        });
+      }
     }
-  };
-});
-}
+  });
+};
 
 //Add a user to database
-
 
 exports.addUser = async (req, res, next) => {
   try {
@@ -107,7 +107,6 @@ exports.addUser = async (req, res, next) => {
 };
 
 exports.deleteUser = (req, res, next) => {
-  
   const { id } = req.body;
   const sql = "DELETE FROM users where (id) = (?)";
   db.query(sql, [id], (err, row) => {

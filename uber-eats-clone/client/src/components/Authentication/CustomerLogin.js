@@ -1,12 +1,21 @@
 import React, { useState } from "react";
+import { getUser } from "../../actions/userAction";
+import {connect } from 'react-redux'
+import { Redirect } from 'react-router-dom';
 
-const CustomerLogin = () => {
+const CustomerLogin = ({getUser, user}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const searchUsername = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
-    console.log(email , password, " EP" ) 
+    console.log(email , password, " EP" );
+    getUser(email, password);
+    console.log(user, " User in cust login")
+  }
+  if(user.user.data.length > 0){
+    console.log("Go to main page");
+    
   }
   console.log(email);
   return (
@@ -27,7 +36,7 @@ const CustomerLogin = () => {
       <div className="cl-stage-wrapper" id="app-body" data-reactid="13">
         <div className="cl-stage-wrapper2">
           <div>
-            <form className="cl-form" >
+            <form className="cl-form" onSubmit={onSubmit}>
               <h4 className="cl-label" id="input-title">
                 Welcome back
               </h4>
@@ -86,12 +95,14 @@ const CustomerLogin = () => {
                   </div>
                 </div>
                 <div className="cl-error-caption" id="error-caption">
-                  <div className="cl-error-caption-text"></div>
+                  <div className="cl-error-caption-text">
+                  {user.user.data.length == 0 ? <div>{}</div> : <Redirect to='/' />}
+                  </div>
                 </div>
               </div>
 
               <div className="cl-next-btn">
-                <button className="cl-next-btn2" onSubmit={searchUsername}>
+                <button className="cl-next-btn2" >
                   <span className="cl-next-btn-label">Next</span>
                   <i className="cl-next-btn-icon"></i>
                 </button>
@@ -115,5 +126,11 @@ const CustomerLogin = () => {
     </div>
   );
 };
-
-export default CustomerLogin;
+const mapStateToProps = (state) => {
+  console.log(state.user)
+  return {
+    user: state.user,
+  }
+  
+}
+export default connect(mapStateToProps, { getUser })(CustomerLogin);

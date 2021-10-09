@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 
 import CustomerSignup from '../src/components/Authentication/CustomerSignup'
-import CustomerSignup2 from './components/Authentication/CustomerSignup2';
+import CustomerSignup3 from './components/Authentication/CustomerSignup3';
 import CustomerLogin from './components/Authentication/CustomerLogin';
 import Profile from './components/Customer/Profile';
 import {Provider } from 'react-redux';
@@ -26,7 +26,8 @@ function App() {
       
       <Router>
       <Header />
-        <Route path='/signup' exact component= {CustomerLogin }/>
+        <Route path='/signin' exact component= {CustomerLogin }/>
+        <Route path='/signup' exact component= {CustomerSignup3 }/>
         <Route path="/" exact component={Main}/>
         <Route path="/restaurant"  component={RestaurantPage}/>
       </Router>
