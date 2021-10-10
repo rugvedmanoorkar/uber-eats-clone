@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-const RestaurantProfile = () => {
+const Menu = () => {
   const [fullname, setFullname] = useState("");
   const [store, setStore] = useState("");
   const [password, setPassword] = useState("");
@@ -28,7 +29,7 @@ const RestaurantProfile = () => {
           </a>
         </div>
       </div>
-      <div class="cs-main">
+      <div class="cs-main-menu">
         <div className="cs-main2">
           <div class="cs-main-heading">Update your store </div>
           <div class="cs-main-hidden"></div>
@@ -36,11 +37,11 @@ const RestaurantProfile = () => {
         <div className="cl-spacer8"></div>
         <div className="cs-form">
           <form className="cs-form2" method="post">
-            <div>
+            <div className="menu-flex">
               <div class="cs-input-text">
                 <label id="cs-input-label" class="cs-input-label" for="Name">
                   {" "}
-                  Full name (required){" "}
+                  Item{" "}
                 </label>
 
                 <div class="cs-input">
@@ -71,7 +72,7 @@ const RestaurantProfile = () => {
               <div class="cs-input-text">
                 <label id="cs-input-label" class="cs-input-label" for="Name">
                   {" "}
-                  Restaurant name (required){" "}
+                  Description{" "}
                 </label>
                 <div class="cs-input">
                   <input
@@ -101,7 +102,7 @@ const RestaurantProfile = () => {
               <div class="cs-input-text">
                 <label id="cs-input-label" class="cs-input-label" for="Name">
                   {" "}
-                  Password (required){" "}
+                  Calories{" "}
                 </label>
                 <div class="cs-input">
                   <input
@@ -131,7 +132,7 @@ const RestaurantProfile = () => {
               <div class="cs-input-text">
                 <label id="cs-input-label" class="cs-input-label" for="Name">
                   {" "}
-                  Repeat password (required){" "}
+                  Price{" "}
                 </label>
                 <div class="cs-input">
                   <input
@@ -153,20 +154,12 @@ const RestaurantProfile = () => {
                   />
                   <div class="cs-input-icon"></div>
                 </div>
-                <div role="alert" aria-live="assertive" aria-atomic="false">
-                  <div class="cs-input-alert">
-                    &nbsp;
-                    {password == rpassword
-                      ? ""
-                      : "Please re-enter same password  "}
-                  </div>
-                </div>
               </div>
 
               <div class="cs-input-text">
                 <label id="cs-input-label" class="cs-input-label" for="Name">
                   {" "}
-                  Email{" "}
+                  Type{" "}
                 </label>
                 <div class="cs-input">
                   <input
@@ -196,7 +189,7 @@ const RestaurantProfile = () => {
               <div class="cs-input-text">
                 <label id="cs-input-label" class="cs-input-label" for="Name">
                   {" "}
-                  Street{" "}
+                  Category{" "}
                 </label>
                 <div class="cs-input">
                   <input
@@ -226,7 +219,7 @@ const RestaurantProfile = () => {
               <div class="cs-input-text">
                 <label id="cs-input-label" class="cs-input-label" for="Name">
                   {" "}
-                  City{" "}
+                  Ingredients{" "}
                 </label>
                 <div class="cs-input">
                   <input
@@ -256,91 +249,13 @@ const RestaurantProfile = () => {
               <div class="cs-input-text">
                 <label id="cs-input-label" class="cs-input-label" for="Name">
                   {" "}
-                  State{" "}
+                  Upload Image{" "}
                 </label>
-                <div class="cs-input">
-                  <input
-                    id="fullName"
-                    name="fullName"
-                    type="text"
-                    value={state}
-                    class="cs-input-box"
-                    placeholder="State"
-                    aria-describedby="error-caption-cs-input-label form-title cs-input-label"
-                    aria-required="true"
-                    autocorrect="on"
-                    autocapitalize="words"
-                    placeholdermsgkey="m2.first_name"
-                    autofocus="on"
-                    onChange={(e) => {
-                      setState(e.target.value);
-                    }}
-                  />
-                  <div class="cs-input-icon"></div>
-                </div>
-                <div role="alert" aria-live="assertive" aria-atomic="false">
-                  <div class="cs-input-alert">&nbsp;</div>
-                </div>
-              </div>
-
-              {/* Country */}
-
-              <div class="cs-input-text">
-                <label id="cs-input-label" class="cs-input-label" for="Name">
-                  {" "}
-                  Country{" "}
-                </label>
-                <div class="cs-input">
-                  <input
-                    id="fullName"
-                    name="fullName"
-                    type="text"
-                    value={country}
-                    class="cs-input-box"
-                    placeholder="Full name"
-                    aria-describedby="error-caption-cs-input-label form-title cs-input-label"
-                    aria-required="true"
-                    autocorrect="on"
-                    autocapitalize="words"
-                    placeholdermsgkey="m2.first_name"
-                    autofocus="on"
-                    onChange={(e) => {
-                      setCountry(e.target.value);
-                    }}
-                  />
-                  <div class="cs-input-icon"></div>
-                </div>
-                <div role="alert" aria-live="assertive" aria-atomic="false">
-                  <div class="cs-input-alert">&nbsp;</div>
-                </div>
-              </div>
-
-              {/* Pin */}
-
-              <div class="cs-input-text">
-                <label id="cs-input-label" class="cs-input-label" for="Name">
-                  {" "}
-                  Pin{" "}
-                </label>
-                <div class="cs-input">
-                  <input
-                    id="pincode"
-                    name="pincode"
-                    type="number"
-                    value={pin}
-                    class="cs-input-box"
-                    placeholder=""
-                    aria-describedby="error-caption-cs-input-label form-title cs-input-label"
-                    aria-required="true"
-                    autocorrect="on"
-                    placeholdermsgkey="m2.first_name"
-                    autofocus="on"
-                    min="10000"
-                    onChange={(e) => {
-                      setPin(e.target.value);
-                    }}
-                  />
-                  <div class="cs-input-icon"></div>
+                <div className="menu-ok-btn">
+                  <button className="cl-next-btn2">
+                    <span className="cl-next-btn-label">Upload</span>
+                    <i className="cl-next-btn-icon"></i>
+                  </button>
                 </div>
                 <div role="alert" aria-live="assertive" aria-atomic="false">
                   <div class="cs-input-alert">&nbsp;</div>
@@ -349,39 +264,14 @@ const RestaurantProfile = () => {
 
               <div class="cs-input-text">
                 <label id="cs-input-label" class="cs-input-label" for="Name">
-                  {" "}
-                  Contact{" "}
+                  Add Dish
                 </label>
-                <div class="cs-input">
-                  <input
-                    id="fullName"
-                    name="fullName"
-                    type="text"
-                    value={contact}
-                    class="cs-input-box"
-                    placeholder="Full name"
-                    aria-describedby="error-caption-cs-input-label form-title cs-input-label"
-                    aria-required="true"
-                    autocorrect="on"
-                    autocapitalize="words"
-                    placeholdermsgkey="m2.first_name"
-                    autofocus="on"
-                    onChange={(e) => {
-                      setContact(e.target.value);
-                    }}
-                  />
-                  <div class="cs-input-icon"></div>
+                <div className="menu-ok-btn">
+                  <button className="cl-next-btn2">
+                    <span className="cl-next-btn-label">Add</span>
+                    <i className="cl-next-btn-icon"></i>
+                  </button>
                 </div>
-                <div role="alert" aria-live="assertive" aria-atomic="false">
-                  <div class="cs-input-alert">&nbsp;</div>
-                </div>
-              </div>
-
-              <div className="cl-next-btn">
-                <button className="cl-next-btn2">
-                  <span className="cl-next-btn-label">Signup</span>
-                  <i className="cl-next-btn-icon"></i>
-                </button>
               </div>
             </div>
           </form>
@@ -391,4 +281,4 @@ const RestaurantProfile = () => {
   );
 };
 
-export default RestaurantProfile;
+export default Menu;
