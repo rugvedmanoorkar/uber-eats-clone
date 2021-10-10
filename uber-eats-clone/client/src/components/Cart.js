@@ -53,7 +53,7 @@ const Cart = ({getItems, item, close}) => {
             
             <ul className='cart-items'>
             {items.length == 0 
-                ? []
+                ? "Add items to cart"
                 : items.map((item) => ( 
 
                       <CartItem key={item.id} item={item} total = {total}/>

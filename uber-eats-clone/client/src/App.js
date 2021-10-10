@@ -22,6 +22,7 @@ import RestaurantMenu from './components/RestaurantMenu';
 import Cart from './components/Cart';
 import RestaurantSignup from './components/Authentication/RestaurantSignup';
 import Menu from './components/Restaurant/Menu';
+import Orders from './components/Orders/Orders';
 
 
 
@@ -41,7 +42,7 @@ function App() {
         <Route path='/profile/restaurant' exact component= {RProfile}/>
         <Route path='/profile/customer' exact component= {Profile}/>
         <Route path='/menu' exact component= {Menu}/>
-        
+        <Route path='/orders' exact component= {Orders}/>
         <Route path="/" exact component={Main}/>
         <Route path="/restaurant"  component={RestaurantPage}/>
       </Router>
