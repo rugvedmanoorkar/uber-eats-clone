@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { getItems } from "../../actions/menuActions";
+import OrderItem from "./OrderItem";
 
-const OrdersSummary = () => {
+const OrdersSummary = ({ getItems, item }) => {
+  useEffect(() => {
+    getItems();
+  }, [getItems]);
+
+  const items = item.items;
+  console.log(items, " Item in order Summary");
   return (
     <div className="qr b6 qs">
       <h1 className="fl fm cf fn nb">
@@ -76,7 +85,11 @@ const OrdersSummary = () => {
           </a>
         </div>
       </div>
-      <div class="ag"><div class="spacer _40"></div><div class="cz h0 aj cw"></div></div> <div className="v16"></div>
+      <div class="ag">
+        <div class="spacer _40"></div>
+        <div class="cz h0 aj cw"></div>
+      </div>{" "}
+      <div className="v16"></div>
       <div className="ag as">
         <h3 className="pl pm ce cf ag cv">Your items</h3>
         <a
@@ -105,6 +118,9 @@ const OrdersSummary = () => {
       </div>
       <div className="e9"></div>
       <ul>
+        {items.length == 0
+          ? "Add items to cart"
+          : items.map((item) => <OrderItem key={item.id} item={item} />)}
         <li className="ag as q4 q5 q6">
           <div className="cx cr ce cs">
             <div className="bv af ag as">
@@ -439,7 +455,9 @@ const OrdersSummary = () => {
                 <div className="spacer _8"></div>
                 <div className="dk cx cr ce cs qd">$25.40</div>
               </div>
-              <div className="cc fc ce cs b3 qg">Choose Your Filling ($2.75)</div>
+              {/* <div className="cc fc ce cs b3 qg">
+                Choose Your Filling ($2.75)
+              </div>
               <ul>
                 <li className="cc fc ce cs cu">Smoked Brisket</li>
               </ul>
@@ -447,7 +465,7 @@ const OrdersSummary = () => {
               <ul>
                 <li className="cc fc ce cs cu">Half Portion</li>
                 <li className="cc fc ce cs cu">Half Carnitas</li>
-              </ul>
+              </ul> */}
             </div>
           </a>
         </li>
@@ -455,5 +473,11 @@ const OrdersSummary = () => {
     </div>
   );
 };
+const mapStateToProps = (state) => {
+  console.log(state, " State Cart Order Summary");
+  return {
+    item: state.item,
+  };
+};
 
-export default OrdersSummary;
+export default connect(mapStateToProps, { getItems })(OrdersSummary);
