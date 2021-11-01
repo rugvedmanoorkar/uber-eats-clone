@@ -12,12 +12,14 @@ app.use(express.json());
 connectDB();
 
 const users = require("./routes/users");
+const restaurants = require("./routes/restaurants");
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
 app.use("/api/v1/users", users);
+app.use("/api/v1/restaurants", restaurants);
 
 const PORT = process.env.PORT || 5000;
 
