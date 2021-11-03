@@ -13,6 +13,7 @@ connectDB();
 
 const users = require("./routes/users");
 const restaurants = require("./routes/restaurants");
+const menus = require("./routes/menu");
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
@@ -20,6 +21,7 @@ if (process.env.NODE_ENV === "development") {
 
 app.use("/api/v1/users", users);
 app.use("/api/v1/restaurants", restaurants);
+app.use("/api/v1/restaurants", menus);
 
 const PORT = process.env.PORT || 5000;
 
