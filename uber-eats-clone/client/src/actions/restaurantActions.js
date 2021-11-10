@@ -5,7 +5,7 @@ import axios from 'axios'
 export const getRestaurants = () => (dispatch) => {
     //dispatch(setItemsLoading());
     axios
-      .get('http://localhost:5000/restaurants',{
+      .get('http://localhost:5000/api/v1/restaurants',{
         params : {
           "city" : "San Jose"
         },
@@ -31,7 +31,7 @@ export const getRestaurants = () => (dispatch) => {
   export const getRestaurantMenu = (id) => (dispatch) => {
     
     axios
-      .get(`http://localhost:5000/restaurants/${id}`,{
+      .get(`http://localhost:5000/api/v1/restaurants/${id}/menu`,{
         params : {
           "id" : id
         },

@@ -10,10 +10,10 @@ const RestaurantPage = ({getRestaurantMenu, menu}) => {
   
     const location = useLocation();
     const restaurant = location["state"]["restaurant"]
-    console.log(restaurant.id , " IDD")
+    console.log(restaurant._id , " IDD")
  
     useEffect(() => {
-     getRestaurantMenu(restaurant.id);
+     getRestaurantMenu(restaurant._id);
      
    }, [getRestaurantMenu]);
    
